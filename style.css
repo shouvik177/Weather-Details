@@ -5,21 +5,24 @@
     box-sizing: border-box;
 }
 body{
-    background-color:rgb(68, 66, 82) ;
+    background-color: rgb(68, 66, 82);
+    position: relative; /* Ensure the body is positioned relative for the footer */
+    min-height: 100vh;
+    margin: 0;
+    padding-bottom: 510px; /* Adjust this value according to your footer's height */
 }
 .card{
     width: 90%;
     max-width: 470px;
-    background: linear-gradient(135deg, #7bf1d2,#5b548a);
+    background: linear-gradient(135deg, #7bf1d2, #5b548a);
     color: #fff;
-    margin:100px auto 0;
+    margin: 100px auto 0;
     border-radius: 20px;
     padding: 40px 35px;
     text-align: center;
-
 }
 .search{
-    width:100%;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -35,25 +38,25 @@ body{
     background-color: #ebfffc;
     height: 60px;
     border-radius: 30px;
-    flex:1;
-    margin-right:16px;
-    font-size:18px
+    flex: 1;
+    margin-right: 16px;
+    font-size: 18px;
 }
 .search button{
     border: 0;
     outline: 0;
-    background-color:#ebfffc ;
+    background-color: #ebfffc;
     border-radius: 50%;
     height: 50px;
     width: 50px;
-    cursor:pointer;
+    cursor: pointer;
 }
 .search button img{
     width: 20px;
 }
 .weather-icon{
     width: 170px;
-    margin-top:30px ;
+    margin-top: 30px;
 }
 .weather h1{
     font-size: 80px;
@@ -61,11 +64,11 @@ body{
 }
 .weather h2{
     font-size: 45px;
-    font-weight:400;
+    font-weight: 400;
     margin-top: -10px;
 }
 .details{
-    display:flex;
+    display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0 20px;
@@ -74,10 +77,10 @@ body{
 .col{
     display: flex;
     align-items: center;
-    text-align:left;
+    text-align: left;
 }
 .col img{
-    width:40px;
+    width: 40px;
     margin-right: 10px;
 }
 .humidity, .wind{
@@ -86,4 +89,13 @@ body{
 }
 .weather{
     display: none;
+}
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 5px;
 }
